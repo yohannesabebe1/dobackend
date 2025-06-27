@@ -13,13 +13,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ['https://web-o2q2lzb95asz.up-de-fra1-k8s-1.apps.run-on-seenode.com/']
+CSRF_TRUSTED_ORIGINS = ['https://web-o2q2lzb95asz.up-de-fra1-k8s-1.apps.run-on-seenode.com']
 
 
 # Application definition
@@ -108,10 +108,10 @@ WSGI_APPLICATION = 'E_Learning.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('NAME'),
-        'USER': os.environ.get('USER'),
-        'PASSWORD': os.environ.get('PASSWORD'),
-        'HOST': os.environ.get('HOST'),
+        'NAME': config('NAME'),
+        'USER': config('USER'),
+        'PASSWORD': config('PASSWORD'),
+        'HOST': config('HOST'),
         'PORT': '11550',
 
     }
@@ -197,28 +197,28 @@ DJOSER = {
 }
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = os.environ.get('EMAIL_HOST')
-EMAIL_PORT = os.environ.get('EMAIL_PORT')
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_PORT = config('EMAIL_PORT')
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
-DOMAIN=os.environ.get('DOMAIN')
-DOMAIN_REMOTE=os.environ.get('DOMAIN_REMOTE')
+DOMAIN=config('DOMAIN')
+DOMAIN_REMOTE=config('DOMAIN_REMOTE')
 
 
-FRONTEND_URL = os.environ.get('FRONTEND_URL', default='https://edulearn-6xzb.onrender.com')
+FRONTEND_URL = config('FRONTEND_URL', default='https://edulearn-6xzb.onrender.com')
 PAYPAL_TEST = True
 # SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # PayPal Settings
-PAYPAL_EMAIL = os.environ.get('PAYPAL_EMAIL')
-PAYPAL_URL = os.environ.get('PAYPAL_URL')
-PAYPAL_VERIFY_URL = os.environ.get('PAYPAL_VERIFY_URL')
+PAYPAL_EMAIL = config('PAYPAL_EMAIL')
+PAYPAL_URL = config('PAYPAL_URL')
+PAYPAL_VERIFY_URL = config('PAYPAL_VERIFY_URL')
 
 
 # Chapa Settings
-CHAPA_PUBLIC_KEY = os.environ.get('CHAPA_PUBLIC_KEY')
-CHAPA_SECRET_KEY = os.environ.get('CHAPA_SECRET_KEY')
+CHAPA_PUBLIC_KEY = config('CHAPA_PUBLIC_KEY')
+CHAPA_SECRET_KEY = config('CHAPA_SECRET_KEY')
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_files')
