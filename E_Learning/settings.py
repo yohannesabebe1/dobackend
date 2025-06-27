@@ -19,7 +19,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ['https://']
+CSRF_TRUSTED_ORIGINS = ['https://web-o2q2lzb95asz.up-de-fra1-k8s-1.apps.run-on-seenode.com/']
 
 
 # Application definition
@@ -70,7 +70,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
-    'https://edulearn-lvqr.onrender.com',
+    'https://frontend-z5in.onrender.com',
 
 ]
 
@@ -206,7 +206,7 @@ DOMAIN=os.environ.get('DOMAIN')
 DOMAIN_REMOTE=os.environ.get('DOMAIN_REMOTE')
 
 
-FRONTEND_URL = os.environ.get('FRONTEND_URL', default='https://edulearn-lvqr.onrender.com')
+FRONTEND_URL = os.environ.get('FRONTEND_URL', default='https://frontend-z5in.onrender.com')
 PAYPAL_TEST = True
 # SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
