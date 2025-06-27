@@ -18,7 +18,10 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://edulearn-6xzb.onrender.com"]
+ALLOWED_HOSTS = [
+    'edulearn-6xzb.onrender.com',
+    'web-o2q2lzb95asz.up-de-fra1-k8s-1.apps.run-on-seenode.com',
+]
 CSRF_TRUSTED_ORIGINS = [
     'https://web-o2q2lzb95asz.up-de-fra1-k8s-1.apps.run-on-seenode.com',
     'https://edulearn-6xzb.onrender.com'
